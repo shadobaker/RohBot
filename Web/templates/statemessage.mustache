@@ -1,0 +1,23 @@
+﻿<span class="{{ Class }}">
+	{{# ForSteamId }}
+	<a href="http://steamcommunity.com/profiles/{{ ForSteamId }}" target="_blank" class="inherit {{ ForStyle }}">
+	{{/ ForSteamId }}
+	<span class="{{ ForStyle }}">{{{ For }}}</span>
+	{{# ForSteamId }}
+	</a>
+	{{/ ForSteamId }}
+
+	{{{ Content1 }}}
+
+	{{# By }}
+		{{# BySteamId }}
+		<a href="http://steamcommunity.com/profiles/{{ BySteamId }}" target="_blank" class="inherit {{ ByStyle }}">
+		{{/ BySteamId }}
+		<span class="{{ ByStyle }}">{{{ By }}}</span>
+		{{# BySteamId }}
+		</a>
+		{{/ BySteamId }}
+
+		{{{ Content2 }}}
+	{{/ By }}
+</span>

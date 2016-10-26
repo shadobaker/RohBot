@@ -1,0 +1,25 @@
+<li class="message">
+	{{# Time }}
+	<time datetime="{{ DateTime }}">{{{ Time }}}</time>
+	{{/ Time }}
+	{{^ Time }}
+	<time datetime="{{ DateTime }}" class="hidden"></time>
+	{{/ Time }}
+
+	{{# Sender }}
+	<span class="sender">
+		{{# SteamId }}
+		<a href="http://steamcommunity.com/profiles/{{ SteamId }}" target="_blank" class="inherit {{ SenderClasses }}">
+		{{/ SteamId }}
+		<span class="{{ SenderClasses }}">{{{ Sender }}}</span>
+		{{# SteamId }}
+		</a>
+		{{/ SteamId }}
+	</span>
+	:&nbsp;
+	{{/ Sender}}
+
+	<span class="content">
+		{{{ Message }}}
+	</span>
+</li>
