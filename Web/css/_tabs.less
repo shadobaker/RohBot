@@ -1,0 +1,60 @@
+
+#tabs {
+    margin: 0;
+    padding: 6px;
+    vertical-align: top;
+    color: @color-chat-text;
+    background-color: @color-background;
+    list-style: none;
+    overflow: hidden;
+
+    .selected {
+        background-color: @color-tab-selected;
+    }
+
+    > li {
+        display: inline-block;
+        padding: 6px;
+        background-color: @color-tab;
+        cursor: default;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            background-color: @color-tab-hover;
+        }
+
+        > .tab-name {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: top;
+            max-width: 160px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 599px) {
+            > .tab-name {
+                max-width: 80px;
+            }
+        }
+
+        > .tab-close {
+            display: inline-block;
+            padding: 1px;
+            margin-left: 4px;
+            width: 16px;
+            float: right;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            color: darken(@color-chat-text, 50%);
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                color: @color-chat-text;
+                background-color: @color-button;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "Username": "",
+    "Password": "",
+    "AuthCode": "",
+
+    "PersonaName": "~",
+
+    "Host": "http://localhost/",
+
+    "SuperAdminSteam": 76561198002164049,
+    "SuperAdmin": "Rohan",
+
+    "DbAddress": "127.0.0.1",
+    "DbPort": 5432,
+    "DbName": "rohbot",
+    "DbUser": "server",
+    "DbPass": "",
+
+    "NotificationAPIKey": "",
+    "NotificationAppID": "",
+    
+    "EmoticonRegex": "/:(box):/i",
+    
+    "DefaultRoom": "fpp",
+    "Rooms": [
+		{
+            "Type": "SteamRoom",
+            "Name": "FP Programmers",
+            "ShortName": "fpp",
+            "Admin": "Rohan",
+            "LinkTitles": "true",
+            "SteamId": "103582791434244897"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>RohBot</title>
+		<link rel="shortcut icon" href="rohbot.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="manifest" href="manifest.json"/>
+		<meta name="mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<link rel="apple-touch-icon" href="rohbot.png"/>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<header id="header" class="fixed-bar">
+				<h1 id="title" role="heading">RohBot</h1>
+				<form id="login-form" method="POST">
+					<label for="username">Username</label>
+					<input id="username" name="username" placeholder="username" spellcheck="false" required>
+					<label for="password">Password</label>
+					<input id="password" name="password" placeholder="password" type="password" required>
+					<input type="submit" class="btn" value="Login" id="loginButton">
+					<input type="button" class="btn" value="Register" id="registerButton">
+				</form>
+			</header>
+			<ol id="tabs"></ol>
+			<div id="room-area">
+				<div id="history"></div>
+				<div id="users"></div>
+			</div>
+			<footer id="footer" class="fixed-bar">
+				<form id="chat-form" method="POST">
+					<label for="message-box">Send a message</label>
+					<textarea aria-controls="chat" id="message-box" name="message-box" placeholder="enter message ..."></textarea>
+					<input type="submit" class="btn" value="Send" id="send">
+				</form>
+			</footer>
+		</div>
+		<script src="jslibs.min.js"></script>
+		<script src="templates.js"></script>
+		<script src="rohbot.js"></script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+
+#history {
+    > ol {
+        list-style: none;
+        margin: 0;
+        padding: 4px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+
+        > li {
+            line-height: 1.2em;
+            font-size: 0.9em;
+            color: @color-chat-text;
+            margin-left: 0;
+        }
+
+        time {
+            color: @color-user-steam;
+            white-space: nowrap;
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        a.inherit {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        img {
+            height: 17px;
+            width: 17px;
+            vertical-align: text-top;
+        }
+
+        .sender {
+            color: @color-user-steam;
+            white-space: nowrap;
+        }
+    }
+}
+
+a {
+    text-decoration: underline;
+    color: @color-chat-url;
+
+    &:hover {
+        cursor: pointer;
+        color: @color-chat-text;
+    }
+}
+
+.inline-users {
+    padding: 4px 4px 1px 4px !important;
+    background-color: @color-userlist-background;
+
+    > li {
+        display: inline-block;
+        width: (@userlist-width / 1.5);
+        padding-right: @userlist-padding;
+
+        > img {
+            width: @userlist-height !important;
+            height: @userlist-height !important;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        a:hover {
+            text-decoration: underline !important;
+        }
+    }
+}

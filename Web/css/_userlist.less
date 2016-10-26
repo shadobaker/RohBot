@@ -1,0 +1,88 @@
+
+ol.user-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9em;
+
+    > li {
+        height: @userlist-height;
+        white-space: nowrap;
+
+        > div {
+            padding-left: @userlist-padding;
+            overflow: hidden;
+            text-overflow: clip;
+            
+            &[data-rank=Administrator]:before {
+                content: '\2605\00a0';
+                color: #FECB00;
+            }
+
+            &[data-rank=Moderator]:before {
+                content: '\2605\00a0';
+                color: #CFCFCF;
+            }
+        }
+    }
+
+    img {
+        width: @userlist-height;
+        height: @userlist-height;
+        vertical-align: text-top;
+        float: left;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#users {
+    background-color: @color-userlist-background;
+    width: (@userlist-width + @userlist-padding * 2);
+    overflow-y: scroll;
+
+    ol > li {
+        padding: @userlist-padding;
+        padding-left: (@userlist-padding * 2);
+    }
+}
+
+@media all and (max-width: 899px) {
+    #users {
+        width: ((@userlist-width + @userlist-padding * 2) / 2);
+    }
+}
+
+@media all and (max-width: 599px) {
+    #users {
+        width: ((@userlist-width + @userlist-padding * 2) / 3);
+
+        > ol li {
+            height: 100%;
+            padding: (@userlist-padding / 4);
+            padding-left: 0;
+
+            div {
+                height: inherit;
+            }
+            
+            img,
+            div > :not(:first-child) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 349px) {
+    #users {
+        display: none;
+    }
+}
